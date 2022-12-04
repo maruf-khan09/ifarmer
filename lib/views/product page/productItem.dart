@@ -76,7 +76,7 @@ class _ProductItemState extends State<ProductItem> {
           ),
           InkWell(
             onTap: () {
-              Get.offAndToNamed(checkoutpage);
+              Get.toNamed(checkoutpage);
             },
             child: Container(
               decoration: BoxDecoration(

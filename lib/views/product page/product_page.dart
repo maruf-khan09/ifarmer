@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:ifarmer/utils/dimensions.dart';
 import 'package:ifarmer/views/custom%20widgets/custom_appbar.dart';
 import 'package:ifarmer/views/product%20page/productItem.dart';

@@ -12,4 +12,5 @@ class IFarmerColors {
   static const productFeatureTitle = Color(0xFF616161);
   static const grey = Color(0xFF9E9E9E);
   static const promoCodeBG = Color(0xFFDFE7FF);
+  static const quantitybgcolor = Color(0xFFEAFCDC);
 }
