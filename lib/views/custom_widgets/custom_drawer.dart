@@ -73,10 +73,12 @@ class _CustomDrawerState extends State<CustomDrawer> {
                           )
                         : CircleAvatar(
                             radius: 30.0,
-                            child: Image.asset("assets/images/cancelled.gif"),
+                            backgroundImage:
+                                Image.asset("assets/images/cancelled.gif")
+                                    .image,
                             backgroundColor: Colors.transparent,
                           ),
-                    SizedBox(
+                    const SizedBox(
                       width: Dimensions.MARGIN_SIZE_SMALL,
                     ),
                     Column(
@@ -117,10 +119,12 @@ class _CustomDrawerState extends State<CustomDrawer> {
                       ),
                       leading: SvgPicture.asset(
                         "assets/images/home.svg",
-                        color: Colors.black,
+                        height: 20,
                       ),
                       minLeadingWidth: 2,
-                      onTap: () {}),
+                      onTap: () {
+                        Get.toNamed(productpage);
+                      }),
                   ListTile(
                       dense: true,
                       title: const Text(
@@ -130,7 +134,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                       ),
                       leading: SvgPicture.asset(
                         "assets/images/profile.svg",
-                        color: Colors.black,
+                        height: 20,
                       ),
                       minLeadingWidth: 2,
                       onTap: () {
@@ -145,7 +149,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
                     ),
                     leading: SvgPicture.asset(
                       "assets/images/orderhis.svg",
-                      color: Colors.black,
+                      height: 20,
                     ),
                     minLeadingWidth: 2,
                     onTap: () async {
@@ -159,7 +163,10 @@ class _CustomDrawerState extends State<CustomDrawer> {
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                     ),
-                    leading: SvgPicture.asset("assets/images/logout.svg"),
+                    leading: SvgPicture.asset(
+                      "assets/images/logout.svg",
+                      height: 20,
+                    ),
                     minLeadingWidth: 2,
                     onTap: () {},
                   ),

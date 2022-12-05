@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:ifarmer/utils/colors.dart';
 import 'package:ifarmer/utils/dimensions.dart';
 import 'package:ifarmer/views/custom_widgets/custom_appbar.dart';
@@ -19,7 +17,7 @@ class _OrderHistoryState extends State<OrderHistory> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: CustomDrawer(),
+      drawer: const CustomDrawer(),
       key: _historyKey,
       appBar: CustomAppBar(
           scaffoldkey: _historyKey,
@@ -27,7 +25,7 @@ class _OrderHistoryState extends State<OrderHistory> {
           profile: true,
           title: "Order History"),
       body: SingleChildScrollView(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         primary: true,
         child: Container(
           margin: const EdgeInsets.all(Dimensions.MARGIN_SIZE_DEFAULT),
@@ -65,7 +63,7 @@ class _OrderHistoryState extends State<OrderHistory> {
                           Container(
                             height: 80,
                             width: double.infinity,
-                            margin: EdgeInsets.only(
+                            margin: const EdgeInsets.only(
                                 top: Dimensions.MARGIN_SIZE_SMALL),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -83,34 +81,57 @@ class _OrderHistoryState extends State<OrderHistory> {
                                     Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.start,
-                                      children: [
-                                        Text("Potato"),
-                                        Text("Quantity : 1")
+                                      children: const [
+                                        SizedBox(
+                                          width: 120,
+                                          child: Text(
+                                            "PotatoPotatoPotatoPotatPotatoPotatooPotato",
+                                            maxLines: 2,
+                                            overflow: TextOverflow.ellipsis,
+                                            style: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w500),
+                                          ),
+                                        ),
+                                        Text("Quantity : 1000",
+                                            style: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.w400))
                                       ],
                                     )
                                   ],
                                 ),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [Text("৳85000/"), Text("Unit")],
+                                  children: const [
+                                    Text("৳85000000/",
+                                        style: TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.w500)),
+                                    Text("Unit",
+                                        style: TextStyle(
+                                            fontSize: 10,
+                                            fontWeight: FontWeight.w400))
+                                  ],
                                 )
                               ],
                             ),
                           ),
                           Container(
+                            margin: const EdgeInsets.only(bottom: 5),
                             height: 0.6,
                             color: IFarmerColors.primaryColor,
                             width: double.infinity,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              const Text(
+                            children: const [
+                              Text(
                                 "Total:",
                                 style: TextStyle(
                                     fontSize: 14, fontWeight: FontWeight.w600),
                               ),
-                              const Text(
+                              Text(
                                 "৳85000",
                                 style: TextStyle(
                                     fontSize: 14, fontWeight: FontWeight.w600),
@@ -123,9 +144,9 @@ class _OrderHistoryState extends State<OrderHistory> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              Container(
+                              const SizedBox(
                                 width: 100,
-                                child: const Text(
+                                child: Text(
                                   "Order Status:",
                                   style: TextStyle(
                                       fontSize: 14,
@@ -139,7 +160,7 @@ class _OrderHistoryState extends State<OrderHistory> {
                                       MainAxisAlignment.spaceEvenly,
                                   children: const [
                                     Completion(
-                                      type: "Delivered",
+                                      type: "On Progress",
                                     ),
                                     SizedBox.shrink()
                                   ],

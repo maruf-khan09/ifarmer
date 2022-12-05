@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:ifarmer/utils/colors.dart';
 import 'package:ifarmer/utils/dimensions.dart';
+import 'package:ifarmer/utils/routes.dart';
 import 'package:ifarmer/utils/shared_pref.dart';
 
 class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
@@ -79,16 +80,14 @@ class _CustomAppBarState extends State<CustomAppBar> {
           widget.profile
               ? InkWell(
                   onTap: () {
-                    //  Get.toNamed(cartPage);
+                    Get.toNamed(profilepage);
                   },
                   child: Center(
-                    child: Stack(
-                      children: [
-                        //will be profile image
-                        SvgPicture.asset(
-                          "assets/images/fruitsample.png",
-                        ),
-                      ],
+                    child: CircleAvatar(
+                      radius: 15,
+                      backgroundColor: IFarmerColors.primaryColor,
+                      backgroundImage:
+                          Image.asset("assets/images/fruitsample.png").image,
                     ),
                   ),
                 )

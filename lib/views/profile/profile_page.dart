@@ -49,7 +49,9 @@ class _ProfilePageState extends State<ProfilePage> {
                           )
                         : CircleAvatar(
                             radius: 30.0,
-                            child: Image.asset("assets/images/cancelled.gif"),
+                            backgroundImage:
+                                Image.asset("assets/images/cancelled.gif")
+                                    .image,
                             backgroundColor: Colors.transparent,
                           ),
                     SizedBox(

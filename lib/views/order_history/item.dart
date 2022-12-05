@@ -14,6 +14,7 @@ class _CompletionState extends State<Completion> {
     switch (type) {
       case "Confirmed":
         return Container(
+          padding: const EdgeInsets.all(2),
           alignment: Alignment.center,
           width: 100,
           decoration: BoxDecoration(
@@ -21,11 +22,13 @@ class _CompletionState extends State<Completion> {
               borderRadius: BorderRadius.circular(5)),
           child: Text(
             widget.type.toString(),
-            style: const TextStyle(color: IFarmerColors.priceColor),
+            style: const TextStyle(
+                color: IFarmerColors.priceColor, fontWeight: FontWeight.w600),
           ),
         );
       case "Cancelled":
         return Container(
+          padding: const EdgeInsets.all(2),
           alignment: Alignment.center,
           width: 100,
           decoration: BoxDecoration(
@@ -33,11 +36,14 @@ class _CompletionState extends State<Completion> {
               borderRadius: BorderRadius.circular(5)),
           child: Text(
             widget.type.toString(),
-            style: const TextStyle(color: IFarmerColors.cancelstatusColor),
+            style: const TextStyle(
+                color: IFarmerColors.cancelstatusColor,
+                fontWeight: FontWeight.w600),
           ),
         );
       case "On Progress":
         return Container(
+          padding: const EdgeInsets.all(2),
           alignment: Alignment.center,
           width: 100,
           decoration: BoxDecoration(
@@ -45,11 +51,14 @@ class _CompletionState extends State<Completion> {
               borderRadius: BorderRadius.circular(5)),
           child: Text(
             widget.type.toString(),
-            style: const TextStyle(color: IFarmerColors.onprogressColor),
+            style: const TextStyle(
+                color: IFarmerColors.onprogressColor,
+                fontWeight: FontWeight.w600),
           ),
         );
       case "Order Placed":
         return Container(
+          padding: const EdgeInsets.all(2),
           alignment: Alignment.center,
           width: 100,
           decoration: BoxDecoration(
@@ -57,11 +66,14 @@ class _CompletionState extends State<Completion> {
               borderRadius: BorderRadius.circular(5)),
           child: Text(
             widget.type.toString(),
-            style: const TextStyle(color: IFarmerColors.orderplaceColor),
+            style: const TextStyle(
+                color: IFarmerColors.orderplaceColor,
+                fontWeight: FontWeight.w600),
           ),
         );
       case "Delivered":
         return Container(
+          padding: const EdgeInsets.all(2),
           alignment: Alignment.center,
           width: 100,
           decoration: BoxDecoration(
@@ -69,7 +81,8 @@ class _CompletionState extends State<Completion> {
               borderRadius: BorderRadius.circular(5)),
           child: Text(
             widget.type.toString(),
-            style: const TextStyle(color: IFarmerColors.primaryColor),
+            style: const TextStyle(
+                color: IFarmerColors.primaryColor, fontWeight: FontWeight.w600),
           ),
         );
 
