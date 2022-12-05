@@ -66,7 +66,7 @@ class _OrderedItemState extends State<OrderedItem> {
                       children: [
                         InkWell(
                             onTap: () {
-                              if (count > 0) {
+                              if (count > 1) {
                                 setState(() {
                                   count--;
                                 });

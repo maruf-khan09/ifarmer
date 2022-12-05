@@ -55,7 +55,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                 width: double.infinity,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+                  children: const [
                     Text(
                       "Total:",
                       style: TextStyle(
@@ -82,7 +82,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                         builder: ((context) {
                           return CustomDialog(
                             body: "Order completed.",
-                            imagePath: 'assets/images/success.gif',
+                            imagePath: 'assets/images/congo.gif',
                             onButtonTap: () {
                               // Get.offAllNamed(loginPage,
                               //     arguments: ["", ""]);
@@ -99,7 +99,7 @@ class _CheckoutPageState extends State<CheckoutPage> {
                         builder: ((context) {
                           return CustomDialog(
                             body: "Your order is not completed.",
-                            imagePath: 'assets/images/cancelled.gif',
+                            imagePath: 'assets/images/fail.gif',
                             onButtonTap: () {
                               // Get.offAllNamed(loginPage,
                               //     arguments: ["", ""]);

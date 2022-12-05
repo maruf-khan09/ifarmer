@@ -27,7 +27,7 @@ class _CustomDialogState extends State<CustomDialog> {
     return WillPopScope(
       onWillPop: () async => false,
       child: AlertDialog(
-        // backgroundColor: IFarmerColors.backgroundColor,
+        backgroundColor: IFarmerColors.backgroundColor,
         content: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
@@ -39,6 +39,7 @@ class _CustomDialogState extends State<CustomDialog> {
                 widget.imagePath,
                 height: 125.0,
                 width: 125.0,
+                gaplessPlayback: true,
               ),
             ),
             const SizedBox(

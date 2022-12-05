@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:ifarmer/utils/dimensions.dart';
 import 'package:ifarmer/views/custom_widgets/custom_appbar.dart';
@@ -55,7 +53,7 @@ class _ProductPageState extends State<ProductPage> {
                 padding: const EdgeInsets.all(20),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
-                    childAspectRatio:  0.64,
+                    childAspectRatio: 0.64,
                     mainAxisSpacing: 15,
                     crossAxisSpacing: 15),
                 itemBuilder: (context, index) => InkWell(
