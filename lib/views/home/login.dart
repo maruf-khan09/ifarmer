@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:ifarmer/utils/colors.dart';
 import 'package:ifarmer/utils/dimensions.dart';
 import 'package:ifarmer/utils/routes.dart';
-import 'package:ifarmer/views/custom%20widgets/custom_appbar.dart';
+import 'package:ifarmer/views/custom_widgets/custom_appbar.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});

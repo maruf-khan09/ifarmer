@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ifarmer/utils/dimensions.dart';
-import 'package:ifarmer/views/custom%20widgets/custom_appbar.dart';
+import 'package:ifarmer/views/custom_widgets/custom_appbar.dart';
+import 'package:ifarmer/views/custom_widgets/custom_drawer.dart';
 import 'package:ifarmer/views/product%20page/productItem.dart';
 
 class ProductPage extends StatefulWidget {
@@ -15,6 +16,8 @@ class _ProductPageState extends State<ProductPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _productKey,
+      drawer: const CustomDrawer(),
       appBar: CustomAppBar(
           scaffoldkey: _productKey,
           drawer: true,

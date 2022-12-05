@@ -34,8 +34,7 @@ class _ProductItemState extends State<ProductItem> {
           ),
           Container(
             margin: const EdgeInsets.symmetric(
-                horizontal: Dimensions.MARGIN_SIZE_SMALL,
-                vertical: Dimensions.MARGIN_SIZE_SMALL),
+                horizontal: Dimensions.MARGIN_SIZE_SMALL, vertical: 5),
             child: const Text(
               "Titleasdasdsadassasdasdsasdadasdasdaddass",
               maxLines: 2,
@@ -47,11 +46,8 @@ class _ProductItemState extends State<ProductItem> {
             ),
           ),
           Container(
-            // margin: const EdgeInsets.symmetric(
-            //     horizontal: Dimensions.MARGIN_SIZE_SMALL,
-            //     vertical: Dimensions.MARGIN_SIZE_SMALL),
             margin: const EdgeInsets.fromLTRB(Dimensions.MARGIN_SIZE_SMALL, 0,
-                Dimensions.MARGIN_SIZE_SMALL, Dimensions.MARGIN_SIZE_SMALL),
+                Dimensions.MARGIN_SIZE_SMALL, 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -84,11 +80,8 @@ class _ProductItemState extends State<ProductItem> {
                   borderRadius: BorderRadius.circular(6)),
               height: 30,
               width: double.infinity,
-              margin: const EdgeInsets.fromLTRB(
-                  Dimensions.MARGIN_SIZE_SMALL,
-                  Dimensions.MARGIN_SIZE_SMALL,
-                  Dimensions.MARGIN_SIZE_SMALL,
-                  Dimensions.MARGIN_SIZE_SMALL),
+              margin: const EdgeInsets.fromLTRB(Dimensions.MARGIN_SIZE_SMALL, 0,
+                  Dimensions.MARGIN_SIZE_SMALL, Dimensions.MARGIN_SIZE_SMALL),
               child: const Center(
                 child: Text(
                   "Order",

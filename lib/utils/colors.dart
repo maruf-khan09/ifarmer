@@ -13,4 +13,5 @@ class IFarmerColors {
   static const grey = Color(0xFF9E9E9E);
   static const promoCodeBG = Color(0xFFDFE7FF);
   static const quantitybgcolor = Color(0xFFEAFCDC);
+  static const backgroundColor =  Color(0xFFFFFFEE);
 }

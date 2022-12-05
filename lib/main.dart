@@ -5,9 +5,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:ifarmer/utils/colors.dart';
 import 'package:ifarmer/utils/routes.dart';
 import 'package:ifarmer/utils/shared_pref.dart';
-import 'package:ifarmer/views/checkout%20page/checkoutpage.dart';
+import 'package:ifarmer/views/checkout/checkoutpage.dart';
 import 'package:ifarmer/views/home/login.dart';
 import 'package:ifarmer/views/product%20page/product_page.dart';
+import 'package:ifarmer/views/profile/profile_page.dart';
 import 'package:ifarmer/views/splash_screen.dart';
 
 void main() async {
@@ -42,11 +43,10 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
       // locale: context.locale,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          scaffoldBackgroundColor: const Color(0xFFFFFFEE),
+          scaffoldBackgroundColor: IFarmerColors.backgroundColor,
           brightness: Brightness.light,
           primaryColor: IFarmerColors.primaryColor,
-          textTheme: GoogleFonts.notoSansBengaliTextTheme(
-              Theme.of(context).textTheme)),
+          textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)),
 
       unknownRoute: GetPage(
         name: splashPage,
@@ -62,9 +62,13 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
           name: productpage,
           page: () => const ProductPage(),
         ),
-         GetPage(
+        GetPage(
           name: checkoutpage,
           page: () => const CheckoutPage(),
+        ),
+        GetPage(
+          name: profilepage,
+          page: () => const ProfilePage(),
         ),
       ],
     );

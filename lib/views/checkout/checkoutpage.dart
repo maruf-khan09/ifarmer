@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ifarmer/utils/colors.dart';
 import 'package:ifarmer/utils/dimensions.dart';
-import 'package:ifarmer/utils/routes.dart';
-import 'package:ifarmer/views/checkout%20page/orderedItem.dart';
-import 'package:ifarmer/views/custom%20widgets/custom_appbar.dart';
+import 'package:ifarmer/views/checkout/customdialog.dart';
+import 'package:ifarmer/views/checkout/orderedItem.dart';
+import 'package:ifarmer/views/custom_widgets/custom_appbar.dart';
 
 class CheckoutPage extends StatefulWidget {
   const CheckoutPage({super.key});
@@ -75,7 +75,41 @@ class _CheckoutPageState extends State<CheckoutPage> {
               ),
               InkWell(
                 onTap: () {
-                  Get.offAndToNamed(productpage);
+                  if (true) {
+                    showDialog(
+                        context: context,
+                        barrierDismissible: false,
+                        builder: ((context) {
+                          return CustomDialog(
+                            body: "Order completed.",
+                            imagePath: 'assets/images/success.gif',
+                            onButtonTap: () {
+                              // Get.offAllNamed(loginPage,
+                              //     arguments: ["", ""]);
+                              Get.back();
+                            },
+                            titile: "congratulations",
+                            buttonName: 'login',
+                          );
+                        }));
+                  } else {
+                    showDialog(
+                        context: context,
+                        barrierDismissible: false,
+                        builder: ((context) {
+                          return CustomDialog(
+                            body: "Your order is not completed.",
+                            imagePath: 'assets/images/cancelled.gif',
+                            onButtonTap: () {
+                              // Get.offAllNamed(loginPage,
+                              //     arguments: ["", ""]);
+                              Get.back();
+                            },
+                            titile: "Sorry!",
+                            buttonName: 'OK',
+                          );
+                        }));
+                  }
                 },
                 child: Container(
                   decoration: BoxDecoration(

@@ -86,7 +86,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                       children: [
                         //will be profile image
                         SvgPicture.asset(
-                          "assets/images/cart.svg",
+                          "assets/images/fruitsample.png",
                         ),
                       ],
                     ),
