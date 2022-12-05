@@ -7,7 +7,8 @@ import 'package:ifarmer/utils/routes.dart';
 import 'package:ifarmer/utils/shared_pref.dart';
 import 'package:ifarmer/views/checkout/checkoutpage.dart';
 import 'package:ifarmer/views/home/login.dart';
-import 'package:ifarmer/views/product%20page/product_page.dart';
+import 'package:ifarmer/views/order_history/history.dart';
+import 'package:ifarmer/views/product_page/product_page.dart';
 import 'package:ifarmer/views/profile/profile_page.dart';
 import 'package:ifarmer/views/splash_screen.dart';
 
@@ -69,6 +70,10 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
         GetPage(
           name: profilepage,
           page: () => const ProfilePage(),
+        ),
+         GetPage(
+          name: orderhistorypage,
+          page: () => const OrderHistory(),
         ),
       ],
     );

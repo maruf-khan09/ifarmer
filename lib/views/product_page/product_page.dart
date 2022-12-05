@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ifarmer/utils/dimensions.dart';
 import 'package:ifarmer/views/custom_widgets/custom_appbar.dart';
 import 'package:ifarmer/views/custom_widgets/custom_drawer.dart';
-import 'package:ifarmer/views/product%20page/productItem.dart';
+import 'package:ifarmer/views/product_page/productItem.dart';
 
 class ProductPage extends StatefulWidget {
   const ProductPage({super.key});

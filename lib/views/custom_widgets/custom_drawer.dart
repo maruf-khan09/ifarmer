@@ -148,7 +148,9 @@ class _CustomDrawerState extends State<CustomDrawer> {
                       color: Colors.black,
                     ),
                     minLeadingWidth: 2,
-                    onTap: () async {},
+                    onTap: () async {
+                      Get.toNamed(orderhistorypage);
+                    },
                   ),
                   ListTile(
                     dense: true,
